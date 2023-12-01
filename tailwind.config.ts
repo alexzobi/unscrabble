@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: [
@@ -13,8 +14,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'sans': ['"Proxima Nova"', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   plugins: [],
+  important: false,
 }
 export default config
